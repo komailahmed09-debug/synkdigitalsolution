@@ -320,6 +320,7 @@ footer{padding-bottom:36px}
 .ph::after{display:none}
 .ph img{border:3px solid #fff;border-radius:18px}
 .ph::before{border-radius:34px}
+@media(max-width:820px){.fnd{grid-template-columns:1fr;gap:30px;justify-items:start}.ph{width:min(300px,86%)}}
 </style>
 <meta name="theme-color" content="#070b14"><meta name="color-scheme" content="dark">
 <meta name="description" content="Synk Digital Solutions builds AI chatbots, voice bots and websites, sets up CCTV monitoring and runs Meta ads for telecom businesses in the USA, Canada and Europe.">
@@ -547,7 +548,7 @@ if("IntersectionObserver" in window){
 var co=new IntersectionObserver(function(es){es.forEach(function(x){if(!x.isIntersecting)return;co.unobserve(x.target);var el=x.target,n=+el.dataset.n,t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/1200);el.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(t0)})},{threshold:.6});
 document.querySelectorAll(".stats b").forEach(function(b){rm?b.textContent=b.dataset.n:co.observe(b)});
 if(!rm){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.12});
-document.querySelectorAll("section h2,section .sub,.tpos,.tlist li,.probs .prob,.tl div,.work,.faq details,.tform,.note,.ph,.stats .wrap>div,.pk,.chips.big li,.sc,.case").forEach(function(el,i){el.classList.add("rv2");el.style.transitionDelay=(i%4)*80+"ms";io.observe(el)})}
+document.querySelectorAll("section h2,section .sub,.tpos,.tlist li,.probs .prob,.tl div,.work,.faq details,.tform,.note,.ph,.stats .wrap>div,.pk,.chips.big li,.case").forEach(function(el,i){el.classList.add("rv2");el.style.transitionDelay=(i%4)*80+"ms";io.observe(el)})}
 }else{document.querySelectorAll(".stats b").forEach(function(b){b.textContent=b.dataset.n})}
 })();
 </script>
