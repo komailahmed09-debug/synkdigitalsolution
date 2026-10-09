@@ -321,6 +321,34 @@ footer{padding-bottom:36px}
 .ph img{border:3px solid #fff;border-radius:18px}
 .ph::before{border-radius:34px}
 @media(max-width:820px){.fnd{grid-template-columns:1fr;gap:30px;justify-items:start}.ph{width:min(300px,86%)}}
+.sc .more{margin-top:18px;align-self:flex-start;font:700 15px Manrope,sans-serif;color:var(--a);background:none;border:0;padding:4px 0;cursor:pointer;border-bottom:1.5px solid transparent}
+.sc .more:hover{border-color:var(--a)}
+.dlg{border:1px solid var(--line);border-radius:20px;background:#0b111d;color:var(--ink);padding:0;width:min(940px,calc(100vw - 24px));max-height:calc(100vh - 32px);overflow:auto}
+.dlg::backdrop{background:rgba(3,6,12,.75);backdrop-filter:blur(3px)}
+.dlg[open]{animation:fin .35s}
+.dbody{padding:34px;position:relative}
+.dx{position:absolute;top:14px;right:16px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:24px;cursor:pointer}
+.dx:hover{border-color:var(--a)}
+.dbody h2{font-size:clamp(26px,4vw,38px);max-width:none;margin-bottom:10px;padding-right:44px}
+.dsub{color:var(--mute);max-width:60ch;margin:0 0 20px}
+.dprice{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:24px}
+.dprice b{font:800 26px Manrope,sans-serif;color:var(--b)}.dprice span{color:var(--mute);font-size:14.5px}
+.dscroll{overflow-x:auto}
+.cmp{width:100%;border-collapse:collapse;border:1px solid var(--line);font-size:15.5px}
+.cmp th,.cmp td{padding:18px 20px;border-top:1px solid var(--line);text-align:left;vertical-align:top}
+.cmp thead th{border-top:0;background:#0e1626;font:700 12px Manrope,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.cmp thead th:nth-child(2){color:var(--b)}
+.cmp tbody th{font-weight:700;width:18%}
+.cmp td{color:var(--mute)}.cmp td:nth-child(2){color:var(--ink)}
+.dnote{color:var(--mute);margin:20px 0 22px;max-width:62ch}
+@media(max-width:680px){.dbody{padding:24px 18px}
+.cmp,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block}.cmp thead{display:none}.cmp{border:0}
+.cmp tr{border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.cmp tbody th{width:auto;background:#0e1626;padding:12px 16px}
+.cmp td{border-top:1px solid var(--line);padding:12px 16px}
+.cmp td::before{content:attr(data-col);display:block;font:700 11px Manrope,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:3px}}
+.band{padding:22px 0}
+.band span{font-size:clamp(24px,3.6vw,40px);-webkit-text-stroke-width:1px;margin-right:.7em}
 </style>
 <meta name="theme-color" content="#070b14"><meta name="color-scheme" content="dark">
 <meta name="description" content="Synk Digital Solutions builds AI chatbots, voice bots and websites, sets up CCTV monitoring and runs Meta ads for telecom businesses in the USA, Canada and Europe.">
@@ -454,6 +482,15 @@ footer{padding-bottom:36px}
 <div id="ok">Opening your email app...</div>
 </form></div></section>
 </main>
+<dialog id="cctvd" class="dlg" aria-labelledby="cctvt"><div class="dbody">
+<button class="dx" id="cctvx" type="button" aria-label="Close">&times;</button>
+<h2 id="cctvt">Live CCTV monitoring</h2>
+<p class="dsub">Our own operators watch your cameras live, so you are not relying on someone checking footage after the fact.</p>
+<div class="dprice"><b>From $220 per month</b><span>The final price depends on your setup. We quote before any work starts.</span></div>
+<div class="dscroll"><table class="cmp"><thead><tr><th></th><th>Live monitored cameras</th><th>On-site guard</th></tr></thead><tbody><tr><th scope="row">Cost</th><td data-col="Live monitored cameras">From $220 per month.</td><td data-col="On-site guard">A salary and ongoing staffing cost for every person and shift.</td></tr><tr><th scope="row">Coverage</th><td data-col="Live monitored cameras">Operators can watch many camera views at once.</td><td data-col="On-site guard">One person covers the area they are standing in.</td></tr><tr><th scope="row">Reliability</th><td data-col="Live monitored cameras">A team of operators, so coverage does not depend on one person turning up.</td><td data-col="On-site guard">Depends on one person being present and alert.</td></tr><tr><th scope="row">Records</th><td data-col="Live monitored cameras">Footage is recorded, so you can look back at what happened.</td><td data-col="On-site guard">Usually a written log of what the guard saw.</td></tr><tr><th scope="row">Physical presence</th><td data-col="Live monitored cameras">Cameras cannot physically step in, so serious incidents still need you or the authorities.</td><td data-col="On-site guard">A guard can be on site to deter people or respond in person.</td></tr></tbody></table></div>
+<p class="dnote">Many businesses use both: cameras for constant coverage, and a guard where a physical presence matters.</p>
+<button class="btn" id="cctvgo" type="button">Ask about CCTV monitoring</button>
+</div></dialog>
 <footer><div class="wrap"><span>&copy; <span id="y">2026</span> Synk Digital Solutions. All rights reserved.</span><div class="fi"><a class="em" href="mailto:synkdigitalsolution@gmail.com" aria-label="Email Synk Digital Solutions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Email: synkdigitalsolution@gmail.com</span></span></a><a class="fcall" href="tel:+923463435669" aria-label="Call +92 346 3435669"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Call: +92 346 3435669</span></span></a><a class="wh" href="https://wa.me/923463435669" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8a5 5 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8a5 5 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>WhatsApp: +92 346 3435669</span></span></a></div><span><a href="#top">Back to top</a></span></div></footer>
 
 <script>
@@ -535,7 +572,7 @@ if(det.length){var tr=document.createElement("div");tr.className="hsw";
 det.forEach(function(d,i){var sm=d.querySelector("summary"),so=sm.querySelector(".soon"),a=document.createElement("article");a.className="sc";
 a.innerHTML='<span class="n">'+String(i+1).padStart(2,"0")+'</span><h3></h3><p>'+d.querySelector("p").innerHTML+'</p><ul class="chips">'+d.querySelector("ul").innerHTML+'</ul>';
 var h=a.querySelector("h3");h.textContent=sm.firstChild.textContent;if(so){var t=document.createElement("span");t.className="soon";t.textContent=so.textContent;h.appendChild(t)}
-tr.appendChild(a)});
+if(/CCTV/i.test(h.textContent)){var mb=document.createElement("button");mb.type="button";mb.className="more";mb.textContent="Compare and pricing \u2192";mb.onclick=function(){openCctv()};a.appendChild(mb)}tr.appendChild(a)});
 var ct=document.createElement("div");ct.className="hsc";ct.innerHTML='<button aria-label="Previous">&larr;</button><button aria-label="Next">&rarr;</button><span class="ct"></span><div class="bar"><i></i></div>';
 var bs=ct.querySelectorAll("button"),cn=ct.querySelector(".ct"),bi=ct.querySelector("i"),N=det.length;
 function upd(){var w=tr.firstChild.offsetWidth+18,i=Math.min(N-1,Math.round(tr.scrollLeft/w));cn.textContent=String(i+1).padStart(2,"0")+" / "+String(N).padStart(2,"0");bi.style.width=((i+1)/N*100)+"%"}
@@ -551,6 +588,14 @@ if(!rm){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x
 document.querySelectorAll("section h2,section .sub,.tpos,.tlist li,.probs .prob,.tl div,.work,.faq details,.tform,.note,.ph,.stats .wrap>div,.pk,.chips.big li,.case").forEach(function(el,i){el.classList.add("rv2");el.style.transitionDelay=(i%4)*80+"ms";io.observe(el)})}
 }else{document.querySelectorAll(".stats b").forEach(function(b){b.textContent=b.dataset.n})}
 })();
+</script>
+<script>
+function openCctv(){var d=document.getElementById("cctvd");if(d.showModal)d.showModal();else d.setAttribute("open","")}
+(function(){var d=document.getElementById("cctvd");if(!d)return;
+function close(){if(d.close)d.close();else d.removeAttribute("open")}
+document.getElementById("cctvx").onclick=close;
+d.addEventListener("click",function(e){if(e.target===d)close()});
+document.getElementById("cctvgo").onclick=function(){close();var sel=document.getElementById("s");if(sel)sel.value="CCTV Monitoring";var c=document.getElementById("contact");if(c)c.scrollIntoView({behavior:"smooth"})}})();
 </script>
 </body>
 </html>
